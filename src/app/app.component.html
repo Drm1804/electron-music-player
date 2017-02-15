@@ -9,3 +9,13 @@
         [title]="title">
 
 </music-details>
+
+<music-player
+    (backward)="handleBackward()"
+    (pauseplay)="handlePausePlay()"
+    (forward)="handleForward()"
+    (random)="handleRandom($event)"
+    (stop)="handleStop()"
+    [paused]="paused">
+
+</music-player>

@@ -9,6 +9,7 @@ import { MusicService } from './music/shared/music.service';
 export class AppComponent implements OnInit{
 
   title: string;
+  paused: boolean = false;
 
   tracks: any[] = [];
   filteredTracks: any[] = [];
@@ -16,6 +17,26 @@ export class AppComponent implements OnInit{
   constructor(
       private musicService: MusicService
   ){}
+
+  handleRandom(){
+        console.log('handleRandom');
+  }
+
+  handleForward(){
+        console.log('handleForward');
+  }
+
+  handlePausePlay(){
+        console.log('handlePausePlay');
+  }
+
+  handleStop(){
+        console.log('handleStop');
+  }
+
+  handleBackward(){
+        console.log('handleBackward');
+  }
 
   handleQuery(payload){
     this.musicService.findTracks(payload)

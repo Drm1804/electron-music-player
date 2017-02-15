@@ -8,7 +8,8 @@ import {MusicSearchComponent} from './music-search/music-search.component';
 
 import {ApiService} from './shared/api.service'
 import {MusicService} from './shared/music.service';
-import { MusicDetailsComponent } from './music-details/music-details.component'
+import { MusicDetailsComponent } from './music-details/music-details.component';
+import { MusicPlayerComponent } from './music-player/music-player.component'
 
 @NgModule({
     imports: [
@@ -19,11 +20,13 @@ import { MusicDetailsComponent } from './music-details/music-details.component'
     ],
     exports: [
         MusicSearchComponent,
-        MusicDetailsComponent
+        MusicDetailsComponent,
+        MusicPlayerComponent
     ],
     declarations: [
         MusicSearchComponent,
-        MusicDetailsComponent
+        MusicDetailsComponent,
+        MusicPlayerComponent
     ],
     providers: [
         ApiService,
