@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MusicService } from './music/shared/music.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!!';
+
+  tracks: any[] = [];
+  filteredTracks: any[] = [];
+
+  constructor(
+      private musicService: MusicService
+  ){}
+
+  handleQuery(payload){
+    this.musicService.findTracks(payload)
+        .subscribe(tracks => {
+          this.filteredTracks = tracks
+        })
+  }
+
+
+  handleUpdate(track){
+    console.log(track);
+  }
 }

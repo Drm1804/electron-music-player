@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<music-search
+        (query)="handleQuery($event)"
+        (update)="handleUpdate($event)"
+        [tracks]="filteredTracks"
+></music-search>
