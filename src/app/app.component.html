@@ -1,5 +1,11 @@
 <music-search
         (query)="handleQuery($event)"
         (update)="handleUpdate($event)"
-        [tracks]="filteredTracks"
-></music-search>
+        [tracks]="filteredTracks">
+
+</music-search>
+
+<music-details
+        [title]="title">
+
+</music-details>

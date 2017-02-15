@@ -7,7 +7,8 @@ import {AutoCompleteModule} from 'primeng/primeng';
 import {MusicSearchComponent} from './music-search/music-search.component';
 
 import {ApiService} from './shared/api.service'
-import {MusicService} from './shared/music.service'
+import {MusicService} from './shared/music.service';
+import { MusicDetailsComponent } from './music-details/music-details.component'
 
 @NgModule({
     imports: [
@@ -16,8 +17,14 @@ import {MusicService} from './shared/music.service'
         AutoCompleteModule,
         CommonModule
     ],
-    exports: [MusicSearchComponent],
-    declarations: [MusicSearchComponent],
+    exports: [
+        MusicSearchComponent,
+        MusicDetailsComponent
+    ],
+    declarations: [
+        MusicSearchComponent,
+        MusicDetailsComponent
+    ],
     providers: [
         ApiService,
         MusicService

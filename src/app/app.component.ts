@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MusicService } from './music/shared/music.service';
 
 @Component({
@@ -6,7 +6,9 @@ import { MusicService } from './music/shared/music.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  title: string;
 
   tracks: any[] = [];
   filteredTracks: any[] = [];
@@ -25,5 +27,9 @@ export class AppComponent {
 
   handleUpdate(track){
     console.log(track);
+  }
+
+  ngOnInit(){
+    console.log('ngOnInit');
   }
 }
