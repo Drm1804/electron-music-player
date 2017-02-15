@@ -8,11 +8,14 @@ import { MusicService } from './music/shared/music.service';
 })
 export class AppComponent implements OnInit{
 
-  title: string;
-  paused: boolean = false;
-
-  tracks: any[] = [];
-  filteredTracks: any[] = [];
+    title;
+    position;
+    elapsed;
+    duration;
+    paused = true;
+    tracks: any[] = [];
+    filteredTracks: any[] = [];
+    backgroundStyle
 
   constructor(
       private musicService: MusicService
