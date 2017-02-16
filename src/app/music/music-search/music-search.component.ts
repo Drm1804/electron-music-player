@@ -15,7 +15,6 @@ export class MusicSearchComponent{
   @Output() query = new EventEmitter();
 
   search(event) {
-    console.log(event);
     this.query.emit(event.query);
   }
 

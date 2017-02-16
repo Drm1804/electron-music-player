@@ -1,28 +1,34 @@
-<music-search
-        (query)="handleQuery($event)"
-        (update)="handleUpdate($event)"
-        [tracks]="filteredTracks">
+<div [ngStyle]="backgroundStyle">
 
-</music-search>
+    <music-search
+            (query)="handleQuery($event)"
+            (update)="handleUpdate($event)"
+            [tracks]="filteredTracks">
 
-<music-details
-        [title]="title">
+    </music-search>
 
-</music-details>
+    <music-details
+            [title]="title">
 
-<music-player
-        (backward)="handleBackward()"
-        (pauseplay)="handlePausePlay()"
-        (forward)="handleForward()"
-        (random)="handleRandom($event)"
-        (stop)="handleStop()"
-        [paused]="paused">
+    </music-details>
 
-</music-player>
+    <music-player
+            (backward)="handleBackward()"
+            (pauseplay)="handlePausePlay()"
+            (forward)="handleForward()"
+            (random)="handleRandom($event)"
+            (stop)="handleStop()"
+            [paused]="paused">
 
-<music-progress
-        [current]="position"
-        [elapsed]="elapsed"
-        [total]="duration"
-></music-progress>
+    </music-player>
+
+    <music-progress
+            [current]="position"
+            [elapsed]="elapsed"
+            [total]="duration"
+    ></music-progress>
+
+</div>
+
+
 
